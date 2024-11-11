@@ -1263,6 +1263,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -105428362057704645, guid: 2f5921cce9a095b48822136dddab40b3, type: 3}
+      propertyPath: sceneViewId
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 136297702394439716, guid: 2f5921cce9a095b48822136dddab40b3, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.35
@@ -2669,6 +2673,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3114129802307733881, guid: 6b7bd621961b23e46a7b5d862458ed86, type: 3}
       propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4624869761057043956, guid: 6b7bd621961b23e46a7b5d862458ed86, type: 3}
+      propertyPath: sceneViewId
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5490814219586104199, guid: 6b7bd621961b23e46a7b5d862458ed86, type: 3}

@@ -7,6 +7,9 @@ TagManager:
   - Goal
   - Ball
   - Bot
+  - Bullet
+  - Player1
+  - Player2
   layers:
   - Default
   - TransparentFX

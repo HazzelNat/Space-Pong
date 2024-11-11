@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR;
@@ -40,7 +39,8 @@ public class GameManager : MonoBehaviour
         StartingScore();
 
         txtPlayerScoreL.text = PlayerScoreL.ToString();
-        txtPlayerScoreR.text = PlayerScoreR.ToString();
+        txtPlayerScoreR.text = PlayerScoreR.ToString();    
+        
     }
 
     public void StartingScore()
@@ -59,7 +59,13 @@ public class GameManager : MonoBehaviour
             case "2p_CouchMode":
                 PlayerScoreL = 0;
                 PlayerScoreR = 0;
-                break;        
+                break;
+
+            case "2p_MultiplayerMode":
+                Debug.Log("StartingScore");
+                PlayerScoreL = 0;
+                PlayerScoreR = 0;
+                break;              
         }
     }
 
@@ -99,6 +105,15 @@ public class GameManager : MonoBehaviour
                 else if (PlayerScoreR >= 3){
                     panelLose.SetActive(true);
                 }
+                break;
+
+            case "2p_MultiplayerMode":
+                if (PlayerScoreL >= 3){
+                    panelWin.SetActive(true);
+                }
+                else if (PlayerScoreR >= 3){
+                    panelLose.SetActive(true);
+                }
                 break;    
         }
     }
@@ -125,6 +140,14 @@ public class GameManager : MonoBehaviour
                 break;
 
             case "2p_CouchMode":
+                if(wallID == "LeftGoal"){
+                    PlayerScoreR = PlayerScoreR + 1;
+                } else {
+                    PlayerScoreL = PlayerScoreL + 1;
+                }
+                break;
+
+            case "2p_MultiplayerMode":
                 if(wallID == "LeftGoal"){
                     PlayerScoreR = PlayerScoreR + 1;
                 } else {
